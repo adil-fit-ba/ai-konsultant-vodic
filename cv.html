@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="bs" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adil Joldić · CV</title>
+<script>
+try { if (localStorage.getItem('vodic-tema') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F4F5F2; --surface: #FFFFFF; --ink: #18212B; --muted: #58636D; --rule: #D3D8D4;
+  --firm: #1D5A8C; --cons: #8A5812;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --paper: #0F1317; --surface: #161C22; --ink: #E3E7EA; --muted: #98A3AC; --rule: #2A333B;
+  --firm: #7CB1DE; --cons: #D9A65E;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.62 var(--body); }
+a { color: var(--firm); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--firm); outline-offset: 2px; border-radius: 2px; }
+h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 500; line-height: 1.15; text-wrap: balance; }
+p, ul, ol { margin: 0; }
+strong { font-weight: 600; }
+
+.theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 20; display: inline-flex; align-items: center; gap: 8px; font: 500 0.8rem/1 var(--body); padding: 8px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--ink); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.theme-toggle:hover { border-color: var(--ink); }
+.theme-toggle svg { width: 15px; height: 15px; flex: none; }
+.theme-toggle .moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .moon { display: inline; }
+
+.masthead { border-top: 6px solid; border-image: linear-gradient(90deg, var(--firm) 0 50%, var(--cons) 50% 100%) 1; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 52px 0 36px; display: grid; gap: 16px; }
+.eyebrow { font: 500 0.76rem/1.2 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; }
+.dek { font-family: var(--display); font-size: clamp(1.1rem, 2vw, 1.32rem); line-height: 1.45; max-width: 56ch; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.9rem; }
+
+main { display: grid; gap: 56px; padding: 40px 0 88px; border-top: 1px solid var(--rule); }
+section { display: grid; gap: 16px; }
+h2 { font-size: clamp(1.5rem, 2.6vw, 1.9rem); }
+.lead > p + p { margin-top: 12px; }
+.lead { max-width: 68ch; }
+
+.tl { list-style: none; padding: 0; display: grid; }
+.tl li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 4px 20px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.tl li:last-child { border-bottom: 1px solid var(--rule); }
+.tl .when { font-size: 0.86rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.tl .what { display: grid; gap: 3px; }
+.tl .what b { font-weight: 600; }
+.tl .what span { font-size: 0.95rem; color: var(--muted); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+.tags li { font-size: 0.85rem; padding: 4px 11px; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); }
+
+.pubs { padding-left: 1.3em; display: grid; gap: 10px; font-size: 0.94rem; max-width: 76ch; }
+.pubs em { font-style: italic; }
+.pubs .venue { color: var(--muted); }
+h3 { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+
+footer { border-top: 1px solid var(--rule); padding: 24px 0 48px; font-size: 0.85rem; color: var(--muted); }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .tl li { grid-template-columns: 1fr; }
+}
+@media print {
+  .theme-toggle { display: none; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="Promijeni temu">
+  <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  <span class="theme-label">Tamna tema</span>
+</button>
+
+<header class="masthead">
+  <div class="wrap hero">
+    <p class="eyebrow">Biografija · CV</p>
+    <h1>Mr. sc. Adil Joldić</h1>
+    <p class="dek">Magistar informatičkih nauka i doktorand u oblasti mašinskog učenja. Od 2007. godine radi na Fakultetu informacijskih tehnologija Univerziteta „Džemal Bijedić“ u Mostaru i razvija softverska rješenja.</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/adil-joldic/" rel="me noopener" target="_blank">LinkedIn</a>
+      <a href="index.html">Vodič: Kako angažovati AI konsultanta</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<main>
+
+  <section id="biografija">
+    <h2>Biografija</h2>
+    <div class="lead">
+      <p>Adil Joldić rođen je u Zenici. Srednje obrazovanje stekao je u Wiesbadenu u Njemačkoj i u Zavidovićima. Na Fakultetu informacijskih tehnologija Univerziteta „Džemal Bijedić“ u Mostaru završio je dodiplomski studij 2007. godine i magistarski studij 2011. godine, čime je stekao zvanje magistra informatičkih nauka. Završava doktorski studij Politehnika na istom univerzitetu, u oblasti mašinskog učenja.</p>
+      <p>Na Fakultetu informacijskih tehnologija radi od 2007. godine, kao asistent, viši asistent i viši laborant, a obavljao je i funkciju prodekana za nastavu. Uz akademski rad razvija i održava softverska rješenja.</p>
+      <p>Autor je i koautor naučnih radova iz oblasti inteligentnih sistema, mašinskog učenja i podrške odlučivanju u visokom obrazovanju. Nalazi disertacije objavljeni su 2026. godine na konferencijama ISDA, ICIICE i TILE-TEC, u digitalnoj biblioteci IEEE Xplore.</p>
+    </div>
+  </section>
+
+  <section id="oblasti">
+    <h2>Oblasti rada</h2>
+    <ul class="tags">
+      <li>Mašinsko učenje</li>
+      <li>Inteligentni sistemi</li>
+      <li>Višekriterijsko odlučivanje</li>
+      <li>Podrška odlučivanju</li>
+      <li>Transparentna i provjerljiva primjena AI-a</li>
+      <li>Razvoj softvera</li>
+    </ul>
+  </section>
+
+  <section id="obrazovanje">
+    <h2>Obrazovanje</h2>
+    <ol class="tl">
+      <li><span class="when">U toku</span><div class="what"><b>Doktorski studij Politehnika</b><span>Univerzitet „Džemal Bijedić“ u Mostaru. Disertacija: „Inteligentni sistem za upravljanje procesima u visokoškolskim institucijama“.</span></div></li>
+      <li><span class="when">2011.</span><div class="what"><b>Magistar informatičkih nauka</b><span>Fakultet informacijskih tehnologija, Univerzitet „Džemal Bijedić“ u Mostaru. Magistarski rad: „Strukturni mikro procesi u komunikacijskim online socijalnim mrežama“.</span></div></li>
+      <li><span class="when">2007.</span><div class="what"><b>Dodiplomski studij</b><span>Fakultet informacijskih tehnologija, Univerzitet „Džemal Bijedić“ u Mostaru.</span></div></li>
+      <li><span class="when">Srednja škola</span><div class="what"><b>Wiesbaden (Njemačka) i Zavidovići</b></div></li>
+    </ol>
+  </section>
+
+  <section id="iskustvo">
+    <h2>Akademsko iskustvo</h2>
+    <ol class="tl">
+      <li><span class="when">Od 2007.</span><div class="what"><b>Fakultet informacijskih tehnologija, Univerzitet „Džemal Bijedić“ u Mostaru</b><span>Asistent, viši asistent i viši laborant. Obavljao je funkciju prodekana za nastavu.</span></div></li>
+      <li><span class="when">2018/2019.</span><div class="what"><b>Politehnički fakultet Univerziteta u Zenici</b><span>Vanjski saradnik u nastavi.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="projekti">
+    <h2>Stručni projekti</h2>
+    <ol class="tl">
+      <li><span class="when">Softver</span><div class="what"><b>Lexus Connect</b><span>Rad na platformi.</span></div></li>
+      <li><span class="when">Softver</span><div class="what"><b>Rochester Electronics</b><span>Rad na softverskim projektima za kompaniju.</span></div></li>
+      <li><span class="when">Vođenje projekta</span><div class="what"><b>Elektronski dnevnik za medrese u BiH</b><span>Vođenje projekta ispred Rijaseta Islamske zajednice u BiH.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="disertacija">
+    <h2>Istraživanje</h2>
+    <div class="lead">
+      <p>Disertacija se bavi izborom modela mašinskog učenja za rano prepoznavanje studenata u riziku. Predlaže porodicu višekriterijskih modela odlučivanja koji izbor modela vežu za eksplicitne prioritete ustanove: sposobnost razlikovanja, pouzdanost, interpretabilnost, trošak grešaka i stabilnost. Svaka odluka ostavlja trag iz kojeg se može nezavisno izračunati. Model je evaluiran studijom s 90 studenata završne godine i računskom evaluacijom.</p>
+    </div>
+  </section>
+
+  <section id="publikacije">
+    <h2>Odabrane publikacije</h2>
+    <h3>Nalazi disertacije (IEEE Xplore, 2026)</h3>
+    <ol class="pubs">
+      <li>Joldić, A., Bijedić, N., Gašpar, D., &amp; Mabić, M. (2026). <em>From Unaided Choice to Multi-Criteria Disclosure: A Human Study of ML Model Selection in Higher-Education Quality Assurance</em>. <span class="venue">ISDA 2026, Settat, Maroko, 1–8.</span> <a href="https://doi.org/10.1109/ISDA70544.2026.11605984" target="_blank" rel="noopener">DOI</a></li>
+      <li>Joldić, A., Bijedić, N., &amp; Gašpar, D. (2026). <em>Behavioral Evidence from Staged Multi-Criteria Disclosure: A Companion Human-Study Analysis of ML Model-Selection Deliberation in Educational QA</em>. <span class="venue">ICIICE 2026, Dubai, UAE, 1–7.</span> <a href="https://doi.org/10.1109/ICIICE69672.2026.11565460" target="_blank" rel="noopener">DOI</a></li>
+      <li>Joldić, A., &amp; Bijedić, N. (2026). <em>Human-Centred Acceptance and Selective Reliance in AI-Assisted Decision Support for Higher-Education Quality Assurance</em>. <span class="venue">TILE-TEC 2026, Chengdu, Kina, 138–143.</span> <a href="https://doi.org/10.1109/TILE-TEC70450.2026.11682509" target="_blank" rel="noopener">DOI</a></li>
+    </ol>
+    <h3>Razvoj istraživanja (2023–2024)</h3>
+    <ol class="pubs">
+      <li>Joldić, A., Bijedić, N., &amp; Gašpar, D. (2024). <em>Advancing Dynamic Method Labeling for Optimal Selection in Multicriteria Intelligent Software Systems for Higher Education Business Processes</em>. <span class="venue">LIMEN 2024, 159–165.</span> <a href="https://doi.org/10.31410/LIMEN.2024.159" target="_blank" rel="noopener">DOI</a></li>
+      <li>Bijedić, N., Gašpar, D., &amp; Joldić, A. (2024). <em>Intelligent agent as support for decision making in higher education institutions</em>. <span class="venue">EDULEARN24, 1372–1378.</span> <a href="https://doi.org/10.21125/edulearn.2024.0450" target="_blank" rel="noopener">DOI</a></li>
+      <li>Bijedić, N., Babović, E., Gašpar, D., Kapetanović, S., Joldić, A., &amp; Hodžić, M. (2024). <em>On Labelling Methods for Development of Multi-Criteria Intelligent Agents in Multi-Purpose Software Product Environment</em>. <span class="venue">INFOTEH-JAHORINA 2024, 77–80.</span></li>
+      <li>Joldić, A., Gašpar, D., &amp; Bijedić, N. (2023). <em>Toward Intelligent Data Analysis in Higher Education Institutions</em>. <span class="venue">ITRO 2023.</span></li>
+      <li>Bijedić, N., Gašpar, D., &amp; Joldić, A. (2023). <em>On Machine Learning Supported Curriculum Design and Development</em>. <span class="venue">EDULEARN23.</span> <a href="https://doi.org/10.21125/edulearn.2023.0781" target="_blank" rel="noopener">DOI</a></li>
+    </ol>
+  </section>
+
+  <section id="jezici">
+    <h2>Jezici</h2>
+    <p>Njemački, engleski.</p>
+  </section>
+
+</main>
+</div>
+
+<footer>
+  <div class="wrap">Kontakt: <a href="https://www.linkedin.com/in/adil-joldic/" rel="me noopener" target="_blank">LinkedIn</a> · <a href="index.html">Nazad na vodič</a></div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var label = btn.querySelector('.theme-label');
+  function sync() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    label.textContent = dark ? 'Svijetla tema' : 'Tamna tema';
+  }
+  sync();
+  btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('vodic-tema', next); } catch (e) {}
+    sync();
+  });
+})();
+</script>
+</body>
+</html>

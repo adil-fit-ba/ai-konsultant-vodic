@@ -276,7 +276,7 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
       <li><a href="#prilog-d">D · AI klauzula</a></li>
       <li><a href="#prilog-e">E · Kontrolna lista za ugovor</a></li>
       <li><a href="#prilog-f">F · Pitanja za uvodni razgovor</a></li>
-      <li><a href="#prilog-g">G · Kako napraviti ovakav članak uz AI</a></li>
+      <li><a href="#prilog-g">G · Kako je nastao ovaj tekst</a></li>
       <li><a href="#izvori">Izvori</a></li>
     </ol>
   </details>
@@ -781,12 +781,13 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
 
       <div class="annex" id="prilog-g">
         <div class="annex-head">
-          <div><span class="annex-letter">Prilog G · Metodologija</span><h3>Kako napraviti ovakav članak uz pomoć AI-a</h3></div>
+          <div><span class="annex-letter">Prilog G · Transparentnost</span><h3>Kako je nastao ovaj tekst</h3></div>
         </div>
-        <p>Ovaj vodič je nastao u razgovoru s AI asistentima, u četiri koraka. Procjenu rizika za firmu i konsultanta slijedili su proces s CV-jem i NDA-om, prevođenje apstraktnog rizika u poređenje s poznatim scenarijima i objedinjavanje u javni tekst s prilozima. Na rezultat su uticale sljedeće ulazne informacije. Bez njih se dobija generički tekst. Isti prompt, pokrenut u novom razgovoru bez konteksta, dao je nacrt s istim tezama i ključnim pravnim činjenicama, ali širi i drugačije organizovan (oko 7.500 riječi, devet koraka umjesto pet). Konačni oblik nastao je kroz korake i autorove odluke. Nakon nacrta, drugi model (Codex) u jednom krugu je recenzirao tekst, a u drugom je uredio jezik, terminologiju i dosljednost priloga. Autor je usaglasio svaku izmjenu. Prilog služi transparentnosti kako bi čitalac vidio kako je tekst nastao i na kojim pretpostavkama počiva. Autor je i sam konsultant, pa je tekst namjerno pisan za obje strane.</p>
+        <p>Prilog pokazuje kako je tekst nastao, na kojim pretpostavkama počiva i šta je provjereno, kako bi čitalac sam mogao procijeniti njegovu pouzdanost. Autor je i sam konsultant, pa je tekst namjerno pisan za obje strane.</p>
+        <p>Tekst je nastao u razgovoru s AI asistentima, u četiri koraka: procjena rizika za firmu i konsultanta, proces saradnje s CV-jem i NDA-om, poređenje rizika s poznatim scenarijima i objedinjavanje u javni tekst s prilozima. Nakon nacrta, drugi model (Codex) u jednom krugu je recenzirao tekst, a u drugom je uredio jezik, terminologiju i dosljednost priloga. Autor je usaglasio svaku izmjenu.</p>
 
         <div class="sub">
-          <h3>Ulazne informacije koje najviše utiču na rezultat</h3>
+          <h3>Ulazne informacije koje su oblikovale tekst</h3>
           <div class="tw">
             <table>
               <thead><tr><th>Ulazna informacija</th><th>Zašto je važna</th><th>Primjer iz ovog članka</th></tr></thead>
@@ -820,9 +821,10 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
 
         <div class="sub">
           <div class="annex-head">
-            <h3>Predložak prompta</h3>
+            <h3>Prompt koji sažima ulazne informacije</h3>
             <button class="btn" type="button" data-copy="doc-prompt">Kopiraj prompt</button>
           </div>
+          <p>Prompt objedinjuje ulazne informacije iz razgovora, s poljima umjesto konkretnih podataka. Pokrenut u novom razgovoru bez konteksta, dao je nacrt s istim tezama i ključnim pravnim činjenicama, ali širi i drugačije organizovan (oko 7.500 riječi, devet koraka umjesto pet). Konačni oblik nastao je kroz korake i autorove odluke.</p>
           <pre class="prompt" id="doc-prompt">Napiši javni vodič na bosanskom jeziku za firme u [zemlja] koje angažuju vanjskog konsultanta za [oblast, npr. umjetnu inteligenciju], i za konsultante koji s njima rade. Tekst istovremeno čitaju obje strane, zato savjetuj obje strane pošteno i bez navijanja.
 
 Kontekst:
@@ -844,12 +846,12 @@ Format: [HTML stranica / dokument], direktan i strukturiran stil, bez pretjerano
         </div>
 
         <div class="sub">
-          <h3>Kako raditi s AI-em na ovakvom tekstu</h3>
-          <ul class="check">
-            <li>Radite u koracima, ne jednim promptom: prvo procjena, pa struktura, pa prilozi. Svaki korak ispravlja prethodni.</li>
-            <li>Za svaki propis tražite izvor i provjerite broj službenog glasnika na službenoj stranici, npr. Parlamentarne skupštine BiH.</li>
-            <li>Dajte rezultat drugom modelu na kritiku: šta je jednostrano, šta nedostaje, šta je netačno.</li>
-            <li>Pravne predloške završno pregleda advokat.</li>
+          <h3>Šta je provjereno, a šta nije</h3>
+          <ul class="assume">
+            <li>Propisi i brojevi službenih glasnika provjereni su na službenim stranicama, prije svega Parlamentarne skupštine BiH. Izvori su navedeni na kraju teksta.</li>
+            <li>Tvrdnje o postavkama AI servisa provjerene su u dokumentaciji OpenAI-a i Anthropica.</li>
+            <li>Nalazi drugog modela provjereni su u tekstu, a autor je odlučio koji se prihvataju.</li>
+            <li>Pravne predloške nije pregledao advokat. Prije potpisivanja treba ih dati pravniku.</li>
           </ul>
         </div>
       </div>

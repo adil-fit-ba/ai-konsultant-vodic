@@ -515,6 +515,20 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
 
     <section class="s" id="ai-pravila">
       <h2>Pravila za korištenje AI alata</h2>
+      <h3>Korištenje AI-a: lokalno ili tuđi servis</h3>
+      <p>Da li podaci napuštaju firmu, zavisi od vrste AI-a. Kod jezičkih modela bira se između jeftinog vanjskog servisa i skupe lokalne opreme. Klasične AI metode obično rade lokalno.</p>
+      <div class="tw">
+        <table>
+          <thead><tr><th>Vrsta AI-a</th><th>Primjeri korištenja</th><th>Vanjski AI servis</th><th>Lokalno izvršavanje</th></tr></thead>
+          <tbody>
+            <tr><td>Jezički modeli (LLM)</td><td>Rad firme i AI konsultanta (ChatGPT, Claude, Codex); chatbot ili sažimanje dokumenata u AI rješenju</td><td><span class="pill bad">Podaci izlaze</span> Jeftino i odmah dostupno; podaci se šalju pružaocu pri svakom korištenju</td><td><span class="pill warn">Skupa oprema</span> Podaci ostaju u firmi, ali lokalni model traži znatno skuplju opremu i održavanje</td></tr>
+            <tr><td>ML i druge klasične AI metode</td><td>Predviđanje potražnje, klasifikacija, sistem poslovnih pravila</td><td>Rijetko je potreban</td><td><span class="pill good">Uobičajeno</span> Za poslovne podatke dovoljna je standardna infrastruktura, i za treniranje i za izvršavanje</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Pravila u nastavku odnose se na korištenje vanjskih AI servisa u radu. Ako AI rješenje koristi vanjski servis, to se dogovara u ugovoru o uslugama (Prilog E).</p>
+
+      <h3>Šta se smije unijeti u AI servis</h3>
       <p>Ugovornu zabranu korištenja AI-a teško je provoditi i nadzirati. Bolje je jasno urediti dopušteno korištenje. Za tipičnu malu ili srednju firmu dovoljna je jednostavna klasifikacija.</p>
       <div class="tw">
         <table>
@@ -765,6 +779,7 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
               <label><input type="checkbox" id="cl-10"> Pozivanje na potpisani NDA (ugovor o čuvanju povjerljivih informacija, Prilog A)</label>
               <label><input type="checkbox" id="cl-11"> AI klauzula (Prilog D)</label>
               <label><input type="checkbox" id="cl-12"> Ugovor o obradi ličnih podataka, ako je potreban</label>
+              <label><input type="checkbox" id="cl-20"> Gdje se AI rješenje trenira i izvršava</label>
             </fieldset>
             <fieldset><legend>Odgovornost</legend>
               <label><input type="checkbox" id="cl-13"> Ograničenje odgovornosti, npr. do iznosa honorara</label>

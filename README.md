@@ -1,4 +1,4 @@
-# Kako angažovati AI konsultanta
+# Poslovne tajne i AI servisi: zajednički vodič za firme i AI konsultante
 
 **[Pročitaj vodič online → adil-fit-ba.github.io/ai-konsultant-vodic](https://adil-fit-ba.github.io/ai-konsultant-vodic/)**
 

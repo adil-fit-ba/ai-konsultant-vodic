@@ -73,8 +73,12 @@ strong { font-weight: 600; }
 .masthead { border-top: 6px solid; border-image: linear-gradient(90deg, var(--firm) 0 50%, var(--cons) 50% 100%) 1; }
 .hero { max-width: 1180px; margin: 0 auto; padding: 52px 24px 40px; display: grid; gap: 20px; }
 .eyebrow { font: 500 0.76rem/1.2 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-.hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.8rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.02; max-width: 15ch; }
+.hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.8rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.02; max-width: 22ch; }
 .hero h1 em { font-style: italic; }
+.hero h1 .h1-sub { display: block; margin-top: 0.35em; font-size: 0.44em; line-height: 1.2; letter-spacing: -0.01em; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.keywords { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.keywords li { font-size: 0.8rem; font-weight: 500; padding: 4px 11px; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--muted); }
 .dek { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.42rem); line-height: 1.45; max-width: 50ch; }
 .meta { font-size: 0.86rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 20px; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -239,8 +243,7 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
 
 <header class="masthead">
   <div class="hero">
-    <p class="eyebrow">Zajednički vodič za firme i AI konsultante · Bosna i Hercegovina</p>
-    <h1>Poslovne tajne i <em>AI servisi</em></h1>
+    <h1>Poslovne tajne i <em>AI servisi</em><span class="sr-only">: </span><span class="h1-sub">Zajednički vodič za firme i AI konsultante</span></h1>
     <p class="dek">Javni vodič za firme koje traže stručnjaka za umjetnu inteligenciju i za konsultante koji s njima rade. Šta provjeriti, šta potpisati, šta zaštititi i kako koristiti ChatGPT i Claude bez neopravdanog straha. Obje strane imaju uvid u ista pravila.</p>
     <div class="meta">
       <span>Autor: <a href="https://www.linkedin.com/in/adil-joldic/" rel="author noopener" target="_blank">Adil Joldić</a> · <a href="cv.html">CV</a></span>
@@ -250,11 +253,15 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
       <span>Propisi i postavke AI servisa na dan objave</span>
       <span>Informativni tekst, nije pravni savjet</span>
     </div>
-    <div class="legend" aria-label="Značenje boja">
-      <span class="chip firm">Firma</span>
-      <span class="chip cons">Konsultant</span>
-      <span class="chip both">Obje strane</span>
-    </div>
+    <ul class="keywords" aria-label="Ključne riječi">
+      <li>Poslovne tajne</li>
+      <li>AI servisi</li>
+      <li>Uvođenje AI-a</li>
+      <li>AI automatizacija</li>
+      <li>NDA i AI klauzula</li>
+      <li>Lični podaci</li>
+      <li>Pravni okvir BiH</li>
+    </ul>
   </div>
 </header>
 
@@ -387,6 +394,11 @@ footer { max-width: 1180px; margin: 0 auto; padding: 24px 24px 48px; border-top:
     <section class="s" id="koraci">
       <h2>Pet koraka saradnje</h2>
       <p>Svaki korak obuhvata zadatke za obje strane. Redoslijed je važniji od detalja. Povjerljive informacije razmjenjuju se tek nakon potpisivanja NDA-a, a ugovorena stručna analiza se plaća.</p>
+      <div class="legend" aria-label="Značenje boja">
+        <span class="chip firm">Firma</span>
+        <span class="chip cons">Konsultant</span>
+        <span class="chip both">Obje strane</span>
+      </div>
       <div class="steps">
 
         <article class="step">
